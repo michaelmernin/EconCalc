@@ -2,7 +2,6 @@ package com.theironyard.Entities;
 
 import javax.persistence.*;
 
-import static com.sun.xml.internal.fastinfoset.alphabet.BuiltInRestrictedAlphabets.table;
 
 /**
  * Created by michaelmernin on 2/6/17.
