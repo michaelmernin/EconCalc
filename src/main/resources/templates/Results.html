@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+<form>
+
+{{#industries}}
+    Industry SuperSector Impacted:<b>{{industry}}</b>
+    <br><b>{{industry}}'s</b> Labor Force:{{industryTotalLaborForce}}
+{{/industries}}
+
+
+{{#companies}}
+    <br>Companies Involved:<b>{{companyName}}</b>
+    <br><b>{{companyName}}'s</b> Labor Force:  <b>{{CompanyLaborForce}}</b>
+
+    <br><b>{{companyName}}'s</b> share of Workforce within the Industry Super Sector: <b>{{#industries}}{{industry}}:{{/industries}}</b> {{#calcs}} {{calcs}}
+    {{/calcs}}
+
+    {{/companies}}
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
