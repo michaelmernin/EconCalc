@@ -92,6 +92,9 @@ public class ProgramController  {
     @RequestMapping(path = "/upload-file", method = RequestMethod.POST)
     public String upload(String text, Model model) throws Exception {
 
+        companiesUsed = new ArrayList<>();
+        industryUsed = new ArrayList<>(); 
+
         AlchemyLanguage service = new AlchemyLanguage();
         service.setApiKey(api);
 
@@ -165,7 +168,11 @@ public class ProgramController  {
             tLf += i.getIndustryTotalLaborForce();
 
         }
-        double laborForcePercentage = lbforcetotal(lf, tLf); //items are put through clojure
+
+        //for(Companies pu : companiesUsed) {
+
+            double laborForcePercentage = lbforcetotal(lf, tLf); //items are put through clojure
+       // }
 
         model.addAttribute("industries", industryUsed);
         model.addAttribute("companies", companiesUsed);
@@ -173,6 +180,10 @@ public class ProgramController  {
 
 
         return "Results";
+
+
+
+
     }
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
