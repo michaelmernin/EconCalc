@@ -6,21 +6,17 @@
 </head>
 <body>
 <form>
-
-{{#industries}}
-    Industry SuperSector Impacted:<b>{{industry}}</b>
-    <br><b>{{industry}}'s</b> Labor Force:{{industryTotalLaborForce}}
-{{/industries}}
-
+{{#calcs}} The Needle: {{calcs}} Impacted Labor Force Percentage{{/calcs}}
 
 {{#companies}}
     <br>Companies Involved:<b>{{companyName}}</b>
     <br><b>{{companyName}}'s</b> Labor Force:  <b>{{CompanyLaborForce}}</b>
 
-    <br><b>{{companyName}}'s</b> share of Workforce within the Industry Super Sector: <b>{{#industries}}{{industry}}:{{/industries}}</b> {{#calcs}} {{calcs}}
-    {{/calcs}}
-
+    <br><b>{{companyName}}</b> Operates within the Industry Super Sector: <b>{{#industries}}{{industry}}</b>
+    <br> <b>{{industry}}'s</b> total labor force: {{industryTotalLaborForce}}{{/industries}}
     {{/companies}}
+
+
 
 
 

@@ -93,7 +93,7 @@ public class ProgramController  {
     public String upload(String text, Model model) throws Exception {
 
         companiesUsed = new ArrayList<>();
-        industryUsed = new ArrayList<>(); 
+        industryUsed = new ArrayList<>();
 
         AlchemyLanguage service = new AlchemyLanguage();
         service.setApiKey(api);
